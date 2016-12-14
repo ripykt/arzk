@@ -25,8 +25,29 @@ End Code
         document.getElementById("tdid2").innerHTML = storage[1].data;
         document.getElementById("tdid3").innerHTML = storage[1].time;
 
-       
+        
 
+    });
+
+    //$("#slideshow > div:gt(0)").hide();
+
+    //setInterval(function () {
+    //    $('#slideshow > div:first')
+    //      .fadeOut(2000)
+    //      .next()
+    //      .fadeIn(2000)
+    //      .end()
+    //      .appendTo('#slideshow');
+    //}, 6000);
+
+    $(function () {
+        $('#slideshow > div:gt(0)').hide();
+        setInterval(function () {
+            $('#slideshow > div:first').fadeOut()
+               .next().fadeIn()
+               .end().appendTo('#slideshow');
+        },
+          8000);
     });
 
     function handleclick() {
@@ -112,9 +133,23 @@ End Code
                             <!----> <div aria-live="polite" class="slick-list draggable" style="height: 612px;">
                                 <div class="slick-track" role="listbox" style="opacity: 1; width: 100%;">
                                     
-                                    <div class="image stageteaser slick-slide" data-slick-index="2" tabindex="-1" role="option" aria-describedby="slick-slide32" aria-hidden="true">
+                                    <div class="image stageteaser slick-slide" style="width:100%;">
                                         <div class="background-image">
-                                            <img src="~/Images/97192.jpg" title="" alt="" class="" border="0"><div class="shadow"></div>
+                                            
+
+                                            <div id="slideshow">
+                                                <div>
+                                                    <img src="~/Images/97192.jpg" title="" alt="" class="" border="0">
+                                                </div>
+                                                <div>
+                                                    <img src="~/Images/IMG_1768.jpg" title="" alt="" class="" border="0">
+                                                </div>
+                                                <div>
+                                                    <img src="~/Images/IMG_4829.jpg" title="" alt="" class="" border="0">
+                                                </div>
+                                            </div>
+                                            <div class="shadow"></div>
+
                                         </div>
                                         <div class="overlaytext">
                                             <div class="rte-content">
@@ -253,8 +288,12 @@ End Code
 
 
     </div>
-
-    <div class="text-center">
+    <div class="text-center" style="height: 100px;">
+        <div class="small-ll" style="height: 80px; box-shadow: 1px 1px 4px rgba(0,0,0,.26); text-align:center; margin: 0 auto;float: none;">
+            <h3 style="padding-top: 10px;">Сайт в данное время, находится в стадии реконструкции.</h3>
+        </div>
+    </div>
+    <div class="text-center" style="margin-top: 20px;">
         <h2>Схема проезда</h2>
         <h2>к месту предварительного приема груза</h2>
     </div>
